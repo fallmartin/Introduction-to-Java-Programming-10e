@@ -13,7 +13,7 @@ Here is a sample run:
 Enter v0, v1, and t: 5.5 50.9 4.5
 The average acceleration is 10.0889
 
-Actual output:
+Actual output is as follows:
 Enter v0, v1, and t: 5.5 50.9 4.5
 The average acceleration is 10.088888888888889
 */
