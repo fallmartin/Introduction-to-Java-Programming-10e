@@ -20,7 +20,7 @@ import java.util.Scanner;
  *
  * @author martinfall
  */
-public class projectPopulation {
+public class ProjectPopulation {
     public static void main(String[] args) {
         // Named constant variable to hold the number of seconds per year
         final int SECONDS_PER_YEAR = 31536000;
