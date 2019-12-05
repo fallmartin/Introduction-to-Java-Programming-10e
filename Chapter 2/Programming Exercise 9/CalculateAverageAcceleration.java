@@ -24,7 +24,7 @@ import java.util.Scanner;
  *
  * @author martinfall
  */
-public class calculateAverageAcceleration {
+public class CalculateAverageAcceleration {
     public static void main(String[] args) {
         // Create a Scanner object
         Scanner input = new Scanner(System.in);
