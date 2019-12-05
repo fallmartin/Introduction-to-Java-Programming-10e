@@ -23,7 +23,7 @@ import java.util.Scanner;
  *
  * @author martinfall
  */
-public class calculateEnergy {
+public class CalculateEnergy {
     public static void main(String[] args) {
         // Create a new Scanner object
         Scanner input = new Scanner(System.in);
