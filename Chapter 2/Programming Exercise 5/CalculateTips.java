@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author martinfall
  */
-public class calculateTips {
+public class CalculateTips {
     public static void main(String[] args) {
         // Create Scanner object
         Scanner input = new Scanner(System.in);
