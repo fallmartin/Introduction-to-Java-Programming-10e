@@ -44,6 +44,15 @@ public class PointInARectangle {
         // Vertical distance to (0, 0)
         double verticalDistance
                 = Math.sqrt(Math.pow(0, 2) + Math.pow(y, 2));
+        
+        /* Simplified logically
+        
+        // Horizontal distance to (0, 0)
+        double xDistance = Math.abs(x);
+
+        // Vertical distance to (0, 0)
+        double yDistance = Math.abs(y);
+        */
 
         // Display the results
         System.out.println("Point (" + x + ", " + y + ") is"
