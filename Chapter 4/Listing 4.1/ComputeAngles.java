@@ -17,7 +17,9 @@ public class ComputeAngles {
         Scanner input = new Scanner(System.in);
 
         // Prompt the user to enter three points
-        System.out.print("Enter three points: ");
+        // println for legibility
+        System.out.println("Enter the coordinates of three points "
+                + "separated by spaces like x1 y1 x2 y2 x3 y3: ");
 
         // Collect the input from the user
         double x1 = input.nextDouble();
@@ -44,8 +46,8 @@ public class ComputeAngles {
 
         // Display the results
         System.out.println("The three angles are "
-                + Math.toDegrees(A) + " "
-                + Math.toDegrees(B) + " "
-                + Math.toDegrees(C));
+                + String.format("%.2f", Math.toDegrees(A)) + " "
+                + String.format("%.2f", Math.toDegrees(B)) + " "
+                + String.format("%.2f", Math.toDegrees(C)));
     }
 }
