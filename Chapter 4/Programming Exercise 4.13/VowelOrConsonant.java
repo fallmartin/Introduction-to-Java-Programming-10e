@@ -38,19 +38,13 @@ public class VowelOrConsonant {
 
         if ((decimal >= 97 && decimal <= 122)
                 || (decimal >= 65 && decimal <= 90)) {
-            switch (s) {
+            switch (s.toLowerCase()) {
                 case "a":
                 case "e":
                 case "i":
                 case "o":
                 case "u":
                 // case "y":
-                case "A":
-                case "E":
-                case "I":
-                case "O":
-                case "U":
-                    // case "Y":
                     System.out.println(s + " is a vowel");
                     break;
                 default:
