@@ -76,8 +76,13 @@ public class AdditionQuizLoop {
         // loop continuation condition is while count < NUMBER_OF_QUESTIONS
         while (count < NUMBER_OF_QUESTIONS) {
             // 1. Generate two random single-digit integers
-            int number1 = (int) (Math.random() * 14) + 1;
-            int number2 = (int) (Math.random() * 14) + 1;
+            
+            // a + Math.random() * b returns a random integer 
+            // between a and a + b, excluding a + b
+            // a = 1 , a + b = 16, excluding 16
+            
+            int number1 = (int) (Math.random() * 15) + 1;
+            int number2 = (int) (Math.random() * 15) + 1;
 
             // This is no longer needed for the addition
             // 2. If number1 < number2, swap number1 with number2
