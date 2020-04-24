@@ -1,13 +1,13 @@
 
 /**
- * ﻿(Display current date and time) Listing 2.7, ShowCurrentTime.java, displays the
+ * (Display current date and time) Listing 2.7, ShowCurrentTime.java, displays the
  * current time. Improve this example to display the current date and time. The
  * calendar example in Listing 6.12, PrintCalendar.java, should give you some
  * ideas on how to find the year, month, and day.
  *
  * Output:
  * Today's date is 4/24/2020
- * The current time is 1:07:09
+ * The current time is 1:13:18 AM
  *
  * @author martinfall
  */
@@ -85,7 +85,10 @@ public class CurrentDateAndTime {
         currentHour -= 4;
 
         //System.out.print(" " + currentHour + ":" + currentMinute + ":" + currentSecond);
-        System.out.printf("The current time is %d:%02d:%02d%n", currentHour, currentMinute, currentSecond);
+        System.out.printf("The current time is %d:%02d:%02d ",
+                (currentHour > 12) ? currentHour - 12 : currentHour, currentMinute, currentSecond);
+
+        System.out.print((currentHour > 12) ? "PM" : "AM");
     }
 
     /**
