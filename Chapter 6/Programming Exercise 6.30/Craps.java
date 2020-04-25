@@ -1,6 +1,6 @@
 
 /**
- * ﻿(Game: craps) Craps is a popular dice game played in casinos. Write a program
+ * (Game: craps) Craps is a popular dice game played in casinos. Write a program
  * to play a variation of the game, as follows:
  *
  * Roll two dice. Each die has six faces representing values 1, 2, …, and 6,
@@ -32,46 +32,30 @@ public class Craps {
     }
 
     public static void checkRollResults(int sum) {
-        switch (sum) {
-            case 2:
-            case 3:
-            case 12:
-                System.out.println("Craps! You lose!");
+        /* ﻿If the sum is 2, 3, or 12 (called craps), you lose */
+        if ((sum == 2 || sum == 3 || sum == 12) && point == 0) { // LOSS
+            flag = true;
+            System.out.println("You lose");
+        } else if ((sum == 7 || sum == 11) && point == 0) { // WIN
+            /* ﻿if the sum is 7 or 11 (called natural), you win*/
+            flag = true;
+            System.out.println("You win");
+        } else { // POINT TO DETERMINE WIN OR LOSS
+            /*﻿if the sum is another value (i.e., 4, 5, 6, 8, 9, or 10), a point is
+            established. Continue to roll the dice until either a 7 or the same 
+            point value is rolled. If 7 is rolled, you lose. Otherwise, you win. */
+            if (sum == point) {
+                System.out.println("You win");
                 flag = true;
-                break;
-            case 7:
-            case 11:
-                System.out.println("Natural! You win!");
+            } else if (sum == 7) {
+                System.out.println("You lose");
                 flag = true;
-                break;
-            case 4:
-            case 5:
-            case 6:
-            case 8:
-            case 9:
-            case 10:
-                // A point is established
-                // System.out.println("You rolled a " + sum);
-                System.out.println("The previous point is " + point);
-                
-                // Check if the same point value is rolled
-                if (sum == point) {
-                    System.out.println("You win!");
-                    flag = true;
-                } else if (point == 7) {
-                    System.out.println("You lose!");
-                    flag = true;
-                } else {
-                    point = sum;
-                    System.out.println("The point is now " + point);
-                    flag = false;
-                }
-                break;
-            default:
-                System.out.println("Something went wrong!");
-                break;
+            } else {
+                point = sum;
+                flag = false;
+                // System.out.println("You lose"); // Not sure about the rules here
+            }
         }
-        System.out.println();
     }
 
     /**
@@ -79,17 +63,21 @@ public class Craps {
      *
      */
     public static void rollTwoDice() {
-        // Roll the dice two times
-        int firstRoll = rollOneDice();
-        int secondRoll = rollOneDice();
-        
-        // Add the results of the two rolls
-        int sum = firstRoll + secondRoll;
-        
-        // Display the rolls and their sum
-        System.out.println("Your rolled " + firstRoll + " + " + secondRoll + " = " + sum);
-        
+        // Roll two dice
+        int number1 = rollOneDice();
+        int number2 = rollOneDice();
+
+        // Calculate sum
+        int sum = number1 + number2;
+
+        // Display the roll
+        System.out.printf("You rolled %d + %d = %d%n", number1, number2, sum);
+
+        // Check the sum of two dice
         checkRollResults(sum);
+
+        // Formatting line
+        System.out.println();
     }
 
     /**
