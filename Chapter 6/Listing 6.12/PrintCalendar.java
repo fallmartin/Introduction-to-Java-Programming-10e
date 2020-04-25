@@ -165,7 +165,7 @@ public class PrintCalendar {
         int totalNumberOfDays = getTotalNumberOfDays(year, month);
 
         // Return the start day for the month
-        return (totalNumberOfDays + START_DAY_FOR_JAN_1_1800) % 7;
+        return (totalNumberOfDays + START_DAY_FOR_JAN_1_1800) % 7 + 1;
     }
 
     /**
