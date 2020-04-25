@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * Area = (n * Math.pow(s, 2)) / (4 * Math.tan(Math.PI / n));
  *
- * ﻿Write a method that returns the area of a regular polygon using the
+ * Write a method that returns the area of a regular polygon using the
  * following header:
  *
  * public static double area(int n, double side)
@@ -17,7 +17,7 @@ import java.util.Scanner;
  * Write a main method that prompts the user to enter the number of sides and
  * the side of a regular polygon and displays its area. Here is a sample run:
  *
- * ﻿Enter the number of sides: 5 Enter the side: 6.5 The area of the polygon is
+ * Enter the number of sides: 5 Enter the side: 6.5 The area of the polygon is
  * 72.69017017488385
  *
  * @author martinfall
@@ -34,11 +34,11 @@ public class RegularPolygonArea {
         Scanner input = new Scanner(System.in);
 
         // Prompt the user to enter the number of sides
-        System.out.println("﻿Enter the number of sides: ");
+        System.out.print("Enter the number of sides: ");
         int n = input.nextInt();
 
         // Prompt the user to enter the side
-        System.out.println("Enter the side: ");
+        System.out.print("Enter the side: ");
         double side = input.nextDouble();
 
         // String format
