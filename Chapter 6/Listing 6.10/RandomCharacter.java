@@ -30,7 +30,7 @@ public class RandomCharacter {
     }
 
     /**
-     * Generate a random lowercase letter
+     * Generate a random uppercase letter
      *
      * @return
      */
