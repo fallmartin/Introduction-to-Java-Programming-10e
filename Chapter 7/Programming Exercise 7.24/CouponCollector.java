@@ -13,7 +13,11 @@ import java.util.Arrays;
  * suit and display the four cards picked (it is possible a card may be picked
  * twice). Here is a sample run of the program:
  *
- * ﻿Queen of Spades 5 of Clubs Queen of Hearts 4 of Diamonds Number of picks: 12
+ * Queen of Spades 
+ * 5 of Clubs 
+ * Queen of Hearts 
+ * 4 of Diamonds 
+ * Number of picks: 12
  *
  * @author martinfall
  */
@@ -60,7 +64,7 @@ public class CouponCollector {
             picks++; // increment the picks counter
             // Pick a random card
             int randomIndex = (int) (Math.random() * deck.length);
-            System.out.println(deck[randomIndex]); // Display the random card
+            // System.out.println(deck[randomIndex]); // Display the random card
             
             // Switch randomIndex
             switch (deck[randomIndex] / 13) {
