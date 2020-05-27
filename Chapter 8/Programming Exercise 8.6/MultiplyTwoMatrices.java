@@ -34,7 +34,7 @@ public class MultiplyTwoMatrices {
         // Add two matrices
         double[][] sum = multiplyMatrix(matrix1, matrix2);
 
-        // Display results
+        // Display results to console
         displayResults(matrix1, matrix2, sum);
     }
 
