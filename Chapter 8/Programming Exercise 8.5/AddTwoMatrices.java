@@ -14,7 +14,7 @@ import java.util.Scanner;
  * textbook)
  *
  * Write a test program that prompts the user to enter two 3 * 3 matrices and
- * displays their sum. Here is a sample run: (see textbook)
+ * displays their sum. Here is a sample run: (see textbook).
  *
  * @author martinfall
  */
