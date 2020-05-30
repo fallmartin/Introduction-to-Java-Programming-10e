@@ -20,15 +20,21 @@ public class TicTacToe {
         // Create a new board
         String[][] grid = new String[3][3];
 
+        // Print the grid
+        printGrid(grid);
+
         do {
-            // Print the grid
-            printGrid(grid);
 
             // Play X
             playXTurn(grid);
 
-            // Play O - computer
-            playOTurn(grid);
+            if (!checkDraw(grid)) // Play O - computer
+            {
+                playOTurn(grid);
+            }
+
+            // Print the grid
+            printGrid(grid);
         } while (!checkGrid(grid));
 
     }
@@ -69,7 +75,6 @@ public class TicTacToe {
         // int rowO = input.nextInt();
         // System.out.print("Enter a column (0, 1, or 2) for player O: ");
         // int columnO = input.nextInt();
-        
         // Randomly generate the coordinates for new O
         int rowO = (int) (Math.random() * 3);
         int columnO = (int) (Math.random() * 3);
@@ -224,7 +229,7 @@ public class TicTacToe {
                 || checkColumn(grid)
                 || checkDiagonalLeftToRight(grid)
                 || checkDiagonalRightToLeft(grid)
-                || checkDraw(grid);
+                && !checkDraw(grid);
     }
 
     /**
