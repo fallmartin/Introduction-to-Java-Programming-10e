@@ -151,6 +151,8 @@ public class ConnectFourGame {
             if (board[row][column] == 0) {
                 board[row][column] = (color.equals("Y") ? 1 : 2);
                 break;
+            } else if (board[row][column] != 0 && row == 0) {
+                System.out.println("The row is full. Pick another row next turn.");
             }
         }
     }
