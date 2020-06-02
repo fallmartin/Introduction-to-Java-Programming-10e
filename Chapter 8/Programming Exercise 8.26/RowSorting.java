@@ -40,9 +40,9 @@ public class RowSorting {
         // Create a new array
         double[][] matrix = getInput(input, SIZE);
 
-        sortRows(matrix);
-
-        printMatrix(matrix);
+        double[][] sortedMatrix = sortRows(matrix);
+        
+        printMatrix(sortedMatrix);
     }
 
     /**
@@ -52,31 +52,30 @@ public class RowSorting {
      * @return
      */
     public static double[][] sortRows(double[][] m) {
-        for (int row = 0; row < m.length; row++) {
-            // double[] temp = new double[m[row].length];
-            // System.arraycopy(m[row], 0, temp, 0, m[row].length);
-
+        // Create a new array
+        double[][] sortedM = copyArray(m);
+        
+        for (int row = 0; row < sortedM.length; row++) {
             // Selection sort implementation
-            for (int i = 0; i < m[row].length; i++) {
+            for (int i = 0; i < sortedM[row].length; i++) {
                 // Declare minIndex
                 int minIndex = i;
 
                 // Loop through the row
-                for (int j = i + 1; j < m[row].length; j++) {
-                    if (m[row][j] < m[row][minIndex]) {
+                for (int j = i + 1; j < sortedM[row].length; j++) {
+                    if (sortedM[row][j] < sortedM[row][minIndex]) {
                         minIndex = j;
                     }
                 }
                 // If a smaller value is found, swap it
                 if (minIndex != i) {
-                    double temp = m[row][i];
-                    m[row][i] = m[row][minIndex];
-                    m[row][minIndex] = temp;
+                    double temp = sortedM[row][i];
+                    sortedM[row][i] = sortedM[row][minIndex];
+                    sortedM[row][minIndex] = temp;
                 }
             }
-            // System.out.println(Arrays.toString(m[row]));
         }
-        return m;
+        return sortedM;
     }
 
     /**
@@ -113,5 +112,18 @@ public class RowSorting {
             }
             System.out.println();
         }
+    }
+
+    private static double[][] copyArray(double[][] m) {
+        // Create a new array
+        double[][] copy = new double[m.length][m[0].length];
+        
+        // Copy each element to the right row/column
+        for (int row = 0; row < m.length; row++) {
+            for (int column = 0; column < m[row].length; column++) {
+                copy[row][column] = m[row][column];
+            }
+        }
+        return copy;
     }
 }
