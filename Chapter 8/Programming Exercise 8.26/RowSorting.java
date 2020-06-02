@@ -114,7 +114,7 @@ public class RowSorting {
         }
     }
 
-    private static double[][] copyArray(double[][] m) {
+    public static double[][] copyArray(double[][] m) {
         // Create a new array
         double[][] copy = new double[m.length][m[0].length];
         
