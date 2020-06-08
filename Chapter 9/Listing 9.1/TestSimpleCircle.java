@@ -1,10 +1,10 @@
 
 /**
  * Output:
- * The area of the circle of radius 1.0 is 6.283185307179586
- * The area of the circle of radius 25.0 is 157.07963267948966
- * The area of the circle of radius 125.0 is 785.3981633974482
- * The area of the circle of radius 100.0 is 628.3185307179587
+ * The area of the circle of radius 1.0 is 3.141592653589793
+ * The area of the circle of radius 25.0 is 1963.4954084936207
+ * The area of the circle of radius 125.0 is 49087.385212340516
+ * The area of the circle of radius 100.0 is 31415.926535897932
  *
  * @author martinfall
  */
@@ -64,6 +64,13 @@ class SimpleCircle {
      * Return the area of this circle
      */
     double getArea() {
+        return radius * radius * Math.PI;
+    }
+
+    /**
+     * Return the perimeter of this circle
+     */
+    double getPerimeter() {
         return 2 * radius * Math.PI;
     }
 
