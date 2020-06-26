@@ -41,7 +41,8 @@ public class findPrime {
     public static boolean isPrime(BigInteger b) {
         // for (int divisor = 2; divisor < b / 2; divisor++)
         for (BigInteger divisor = new BigInteger("2");
-                divisor.compareTo(b.divide(new BigInteger("2"))) == -1;
+                // divisor.compareTo(b.divide(new BigInteger("2"))) == -1;
+                divisor.compareTo(b) == -1; // If a num is divisible by 2, then it is not prime (unless that number is 2)
              // I may need to add || divisor.compareTo(b.divide(new BigInteger("2"))) == 0 to include the uppderlimit b / 2
                 divisor = divisor.add(BigInteger.ONE)) {
             if (b.divide(divisor).equals(BigInteger.ZERO)) {
