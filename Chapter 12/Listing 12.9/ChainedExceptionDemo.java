@@ -7,7 +7,7 @@
  * Caused by: java.lang.Exception: New info from method2
  *          at ChainedExceptionDemo.method2(ChainedExceptionDemo.java:24)
  *          at ChainedExceptionDemo.method1(ChainedExceptionDemo.java:17)
- * ... 1 more
+ * ... 1 more 
  *
  * @author martinfall
  */
