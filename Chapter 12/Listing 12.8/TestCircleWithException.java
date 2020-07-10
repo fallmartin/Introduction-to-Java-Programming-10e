@@ -2,7 +2,7 @@
 /**
  * Output:
  * java.lang.IllegalArgumentException: Radius cannot be negative
- * Number of objects created: 1
+ * Number of objects created: 1 
  *
  * @author martinfall
  */
