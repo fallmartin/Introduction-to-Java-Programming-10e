@@ -28,7 +28,7 @@ public class ReadData {
                     firstName + " " + mi + " " + lastName + " " + score);
 
         }
-
+        // Close the file
         input.close();
     }
 }
