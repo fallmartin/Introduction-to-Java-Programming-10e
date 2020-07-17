@@ -11,7 +11,7 @@ import java.util.Scanner;
  * first two strings that are out of the order.
  *
  * Output 1:
- * abijah and abihud are out of order.
+ * accurate and accuracy are out of order.
  * The strings are not stored in increasing order.
  *
  * Output 2:
