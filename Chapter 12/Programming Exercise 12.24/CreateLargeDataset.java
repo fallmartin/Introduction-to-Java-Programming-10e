@@ -46,7 +46,7 @@ public class CreateLargeDataset {
                 if (rank.equals("full")) {
                     output.print("\t");
                 }
-                output.print(salary + "\n");
+                output.printf("$%,.2f%n", salary);
             }
         } catch (FileNotFoundException ex) {
             System.out.println(ex);
