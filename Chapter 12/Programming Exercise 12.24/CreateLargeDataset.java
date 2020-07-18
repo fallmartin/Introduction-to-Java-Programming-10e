@@ -2,9 +2,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
-import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * (Create large dataset) Create a data file with 1,000 lines. Each line in the
