@@ -1,5 +1,12 @@
 
 /**
+ * The two objects have the same area? false
+ *
+ * The area is 78.53981633974483
+ * The perimeter is 31.41592653589793
+ *
+ * The area is 15.0
+ * The perimeter is 16.0
  *
  * @author martinfall
  */
@@ -17,10 +24,10 @@ public class TestGeometricObject {
 
         System.out.println("The two objects have the same area? "
                 + equalArea(geoObject1, geoObject2));
-        
+
         // Display circle
         displayGeometricObject(geoObject1);
-        
+
         // Display rectangle
         displayGeometricObject(geoObject2);
     }
