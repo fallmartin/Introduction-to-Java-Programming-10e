@@ -1,0 +1,61 @@
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.geometry.Pos;
+
+/**
+ * (Characters around circle) Write a program that displays a string Welcome to
+ * Java around the circle, as shown in Figure 14.44b. Hint: You need to display
+ * each character in the right location with appropriate rotation using a loop.
+ *
+ * @author martinfall
+ */
+public class CharactersAroundCircle extends Application {
+
+    @Override // Override the start method in the Applicationt class
+    public void start(Stage stage) throws Exception {
+        // Declare a radius for the circle
+        double radius = 100;
+        // Declare a string with the require text and split it into an array of chars
+        String[] string = "WELCOME TO JAVA ".split("");
+
+        // Create a pane to hold the letters of the string 
+        Pane textPane = new Pane();
+        textPane.setPadding(new Insets(10, 10, 10, 10));
+
+        //  x = r(cos(degrees‎°)) and y = r(sin(degrees‎°))
+        for (int i = 0; i < string.length; i++) {
+            double angle = i * (2 * Math.PI / string.length);
+            double x = radius + radius * Math.cos(angle);
+            double y = radius + radius * Math.sin(angle);
+
+            Text text = new Text(x, y, string[i]);
+            text.setFont(Font.font("Times New Roman", FontWeight.BOLD, FontPosture.REGULAR, 35));
+            text.setRotate(90 + Math.toDegrees(angle));
+            textPane.getChildren().add(text);
+        }
+
+        // Create a stack pane, add the letters pane, and center it
+        StackPane pane = new StackPane();
+        pane.getChildren().add(textPane);
+        pane.setAlignment(Pos.CENTER);
+        pane.setPadding(new Insets(40, 20, 20, 20));
+
+        Scene scene = new Scene(pane);
+        stage.setTitle("Exercise_14_05");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        Application.launch(args);
+    }
+}
