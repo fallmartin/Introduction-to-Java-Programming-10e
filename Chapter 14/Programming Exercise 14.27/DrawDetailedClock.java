@@ -22,7 +22,7 @@ public class DrawDetailedClock extends Application {
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 250, 250);
-        stage.setTitle("Exercise_14_26"); // Set the stage title
+        stage.setTitle("Exercise_14_27"); // Set the stage title
         stage.setScene(scene); // Place the scene in the stage
         // stage.setResizable(false); // Make the stage non-resizable
         stage.show(); // Display the stage
