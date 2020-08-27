@@ -45,7 +45,7 @@ public class PathTransitionDemo extends Application {
         pt.play(); // Start animation
 
         circle.setOnMousePressed(e -> pt.pause());
-        circle.setOnMousePressed(e -> pt.play());
+        circle.setOnMouseReleased(e -> pt.play());
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 250, 250);
