@@ -56,7 +56,7 @@ public class DisplayMousePositionB extends Application {
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 400, 400);
-        primaryStage.setTitle("Exercise_15_7"); // Set title
+        primaryStage.setTitle("Exercise_15_8"); // Set title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
 
