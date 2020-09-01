@@ -50,7 +50,7 @@ public class GeometryInsideACircle extends Application {
 
         // Create a new scene and place it in the stage
         Scene scene = new Scene(pane, 400, 120);
-        primaryStage.setTitle("Exercise_15_11"); // Set the stage title
+        primaryStage.setTitle("Exercise_15_12"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.setResizable(false); // Make the stage not resizable
         primaryStage.show(); // Display the primary stage
