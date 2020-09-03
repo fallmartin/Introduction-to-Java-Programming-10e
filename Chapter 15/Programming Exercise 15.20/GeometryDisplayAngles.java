@@ -105,7 +105,7 @@ public class GeometryDisplayAngles extends Application {
                 ab, bc, ac, // Edges
                 angleA, angleB, angleC); // Angles
 
-        // Create d1 new scene and place it in the stage
+        // Create a new scene and place it in the stage
         Scene scene = new Scene(pane, WIDTH, HEIGHT);
         stage.setTitle("Exercise_15_20"); // Set the stage title
         stage.setScene(scene); // Place the scene in the stage
