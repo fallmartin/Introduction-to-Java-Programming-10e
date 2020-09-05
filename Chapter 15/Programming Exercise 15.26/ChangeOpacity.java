@@ -83,7 +83,7 @@ public class ChangeOpacity extends Application {
 
         // Create a new scene and place it in the pane
         Scene scene = new Scene(pane, width, height);
-        primaryStage.setTitle("Exercise_15_24"); // Set the stage title
+        primaryStage.setTitle("Exercise_15_26"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
         primaryStage.setResizable(false); // Make the stage non-resizeable
