@@ -69,6 +69,6 @@ public class DescriptionPane extends BorderPane {
      * @param text
      */
     public void setDescription(String text) {
-        lblImageTitle.setText(text);
+        taDescription.setText(text);
     }
 }
