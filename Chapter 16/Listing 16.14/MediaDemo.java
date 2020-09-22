@@ -61,6 +61,11 @@ public class MediaDemo extends Application {
         pane.setCenter(mediaView);
         pane.setBottom(hBox);
 
+        // Bind the media view's fit width and height to the pane's width and height
+        mediaView.fitWidthProperty().bind(pane.widthProperty());
+        mediaView.fitHeightProperty().bind(pane.heightProperty().
+                subtract(hBox.heightProperty()));
+
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 650, 500);
         primaryStage.setTitle("MediaDemo"); // Set the stage title
