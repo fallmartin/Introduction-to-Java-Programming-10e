@@ -75,7 +75,7 @@ public class AudioClipDemo extends Application {
 
         // Create a new scene and place it in the pane
         Scene scene = new Scene(pane);
-        primaryStage.setTitle("CountDownStopwatch"); // Set the stage title
+        primaryStage.setTitle("AudioClipDemo"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
         primaryStage.setResizable(false); // Make the stage non-resizeable
