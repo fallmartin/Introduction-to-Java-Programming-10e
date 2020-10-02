@@ -74,15 +74,15 @@ public class MediaDemo extends Application {
         mediaPlayer.currentTimeProperty().addListener(ov -> {
             // Local variables for the current time and total duration
             double currentTime = (int) mediaPlayer.getCurrentTime().toMillis();
-            double totalDuration = (int) mediaPlayer.getCycleDuration().toMillis();
+            double totalTime = (int) mediaPlayer.getCycleDuration().toMillis();
 
             // Set the value and max of time slider
             slTime.setValue(currentTime);
-            slTime.setMax(totalDuration);
+            slTime.setMax(totalTime);
             
             // Update the text of the time label
             lblTime.setText(formatTime((int) currentTime)
-                    + "/" + formatTime((int) totalDuration));
+                    + "/" + formatTime((int) totalTime));
         });
 
         // Add an invalidation listener to the value property of the time slider
