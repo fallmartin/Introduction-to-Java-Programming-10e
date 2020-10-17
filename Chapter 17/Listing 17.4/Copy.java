@@ -2,6 +2,7 @@
 import java.io.*;
 
 /**
+ * Output: 1672 bytes copied
  *
  * @author martinfall
  */
@@ -29,7 +30,7 @@ public class Copy {
 
         // Check if target file exists
         File targetFile = new File(args[1]);
-        if (!targetFile.exists()) {
+        if (targetFile.exists()) {
             System.out.println("Target file " + args[1] + " already exists.");
             System.exit(3);
         }
@@ -50,7 +51,7 @@ public class Copy {
                 output.write((byte) r);
                 numberOfBytesCopied++;
             }
-            
+
             // Display the file size
             System.out.println(numberOfBytesCopied + " bytes copied");
         }
