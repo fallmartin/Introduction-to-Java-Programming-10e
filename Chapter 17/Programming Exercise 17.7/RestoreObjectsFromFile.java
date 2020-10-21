@@ -18,22 +18,26 @@ public class RestoreObjectsFromFile {
 
     public static void main(String[] args)
             throws FileNotFoundException, ClassNotFoundException, IOException {
-        // Create an array of five loan objects
-        Loan[] loans = new Loan[5];
 
         // Populate the array
-        loans[0] = new Loan(3.0, 30, 300000);
-        loans[1] = new Loan(3.25, 30, 310000);
-        loans[2] = new Loan(3.50, 30, 320000);
-        loans[3] = new Loan(3.75, 30, 330000);
-        loans[4] = new Loan(4.0, 30, 340000);
+        Loan loan1 = new Loan(3.0, 30, 300000);
+        Loan loan2 = new Loan(3.25, 30, 310000);
+        Loan loan3 = new Loan(3.50, 30, 320000);
+        Loan loan4 = new Loan(3.75, 30, 330000);
+        Loan loan5 = new Loan(4.0, 30, 340000);
+
+        double totalLoanAmount = 0;
 
         try (
                 // Create an object output stream
                  ObjectOutputStream output = new ObjectOutputStream(
                         new BufferedOutputStream(
                                 new FileOutputStream("Exercise17_06.dat")));) {
-            output.writeObject(loans);
+            output.writeObject(loan1);
+            output.writeObject(loan2);
+            output.writeObject(loan3);
+            output.writeObject(loan4);
+            output.writeObject(loan5);
         }
 
         try (
@@ -41,16 +45,15 @@ public class RestoreObjectsFromFile {
                  ObjectInputStream input = new ObjectInputStream(
                         new BufferedInputStream(
                                 new FileInputStream("Exercise17_06.dat")));) {
-            Loan[] loansReadFromFile = (Loan[]) input.readObject();
-            double totalLoanAmount = 0;
 
-            for (Loan loan : loansReadFromFile) {
+            while (true) {
+                Loan loan = (Loan) input.readObject();
                 totalLoanAmount += loan.getLoanAmount();
-            }
 
+            }
+        } catch (EOFException ex) {
             System.out.printf("The total loan amount is %,.2f%n",
                     totalLoanAmount);
         }
-
     }
 }
