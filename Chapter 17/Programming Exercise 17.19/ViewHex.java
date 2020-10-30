@@ -128,7 +128,7 @@ public class ViewHex {
             case 15 ->
                 hexString + 'f';
             default ->
-                hexString + firstGroupToInt;
+                hexString + secondGroupToInt;
         };
 
         return hexString;
