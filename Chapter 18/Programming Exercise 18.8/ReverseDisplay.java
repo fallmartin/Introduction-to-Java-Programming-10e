@@ -52,7 +52,7 @@ public class ReverseDisplay {
      * @param value
      */
     public static void reverseDisplay(int value) {
-        if (value / 10 <= 0) {
+        if (value / 10 == 0) {
             System.out.print(value);
         } else {
             System.out.print(value % 10);
