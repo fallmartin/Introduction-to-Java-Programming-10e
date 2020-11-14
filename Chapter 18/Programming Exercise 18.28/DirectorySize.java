@@ -54,6 +54,11 @@ public class DirectorySize {
         Stack<File> directories = new Stack<>();
         Stack<File> files = new Stack<>();
 
+        // If the file is a normal file and not a directory, return its length
+        if (file.isFile()) {
+            return file.length();
+        }
+
         // Push the root dir to the directories stack
         directories.push(file);
 
