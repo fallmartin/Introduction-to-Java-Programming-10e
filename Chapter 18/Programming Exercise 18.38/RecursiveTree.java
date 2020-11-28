@@ -12,6 +12,8 @@ import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 /**
+ * (Recursive tree) Write a program to display a recursive tree as shown in
+ * Figure 18.20.
  *
  * @author martinfall
  */
