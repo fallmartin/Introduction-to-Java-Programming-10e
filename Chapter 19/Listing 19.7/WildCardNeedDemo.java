@@ -32,7 +32,7 @@ public class WildCardNeedDemo {
      * @param stack
      * @return
      */
-    public static double max(GenericStack<Number> stack) {
+    public static double max(GenericStack<? extends Number> stack) {
         double max = stack.pop().doubleValue();
 
         while (!stack.isEmpty()) {
