@@ -46,7 +46,11 @@ public class MultipleBounceBall extends Application {
         ScrollBar sbSpeed = new ScrollBar();
         sbSpeed.setMax(20);
         sbSpeed.setMin(10);
-        ballPane.rateProperty().bind(sbSpeed.valueProperty());
+        // ballPane.rateProperty().bind(sbSpeed.valueProperty());
+        // The use of bind can be implemented with listeners on the value property
+        sbSpeed.valueProperty().addListener(ov -> {
+            ballPane.animation.setRate(sbSpeed.getValue());
+        });
 
         BorderPane pane = new BorderPane();
         pane.setCenter(ballPane);
