@@ -2,6 +2,9 @@
 import java.util.*;
 
 /**
+ * Output:
+ * [San Francisco, Beijing, New York, London, Paris]
+ * san francisco beijing new york london paris
  *
  * @author martinfall
  */
