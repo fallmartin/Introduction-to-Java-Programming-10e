@@ -38,7 +38,6 @@ public class Substring {
         LinkedList<Character> curr = new LinkedList<>();
 
         // Find the maximum consecutive increasingly ordered substring
-        // curr.size() > 1 && 
         for (int i = 0; i < str.length(); i++) {
             // If curr is not empty and the last character in curr is > char at i
             if (!curr.isEmpty() && str.charAt(i) < curr.getLast()) {
