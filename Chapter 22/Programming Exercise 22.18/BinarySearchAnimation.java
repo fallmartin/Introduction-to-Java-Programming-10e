@@ -133,7 +133,7 @@ public class BinarySearchAnimation extends Application {
 
         // Create a new Scene and add it to the stage
         Scene scene = new Scene(pane);
-        stage.setTitle("Linear Search Animation"); // Set the stage title
+        stage.setTitle("Binary Search Animation"); // Set the stage title
         stage.setScene(scene); // Specify the scene to be used on this stage
         stage.show(); // Set the visibility of stage to true to display window
         stage.setResizable(true); // The stage is not resizable by the user
