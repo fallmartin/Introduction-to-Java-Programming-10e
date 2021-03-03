@@ -1,4 +1,4 @@
-package listing_23_2;
+package listing_23_3;
 
 /**
  * Output:
