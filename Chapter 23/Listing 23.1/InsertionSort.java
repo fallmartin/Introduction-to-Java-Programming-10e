@@ -1,6 +1,9 @@
 package listing_23_1;
 
 /**
+ * Output:
+ * 2 3 2 5 6 1 -2 3 14 12
+ * -2 1 2 2 3 3 5 6 12 14
  *
  * @author martinfall
  */
@@ -25,6 +28,10 @@ public class InsertionSort {
 
             // Insert the current element into list[k+1]
             list[k + 1] = currentElement;
+
+            // Print to console at each iteration
+            // System.out.print("i = " + i + ": ");
+            // printList(list);
         }
     }
 
