@@ -3,6 +3,7 @@
 Solutions to programming exercises in the textbook
 
 Table of Contents
+
 Chapter 1 Introduction to Computers, Programs, and Java
 Chapter 2 Elementary Programming
 Chapter 3 Selections
