@@ -1,6 +1,7 @@
-# Introduction-to-Java-Programming-10e
+# Introduction to Java programming, Comprehensive Version (10th Edition) 
+Textbook by Y. Daniel Liang
 
-## Solutions to programming exercises in the textbook
+## Solutions to the programming exercises in the textbook.
 
 ### Table of Contents
 
