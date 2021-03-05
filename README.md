@@ -50,7 +50,7 @@ Textbook by Y. Daniel Liang
 * Appendix H Regular Expressions
 * Appendix I Enumerated Types
 
-Bonus Chapters 34–42 are available for the Comprehensive Version from the companion Website at www.pearsonhighered.com/liang:
+##### Bonus Chapters 34–42 are available for the Comprehensive Version from the companion Website at www.pearsonhighered.com/liang:
 - [ ] Chapter 34 Advanced JavaFX
 - [ ] Chapter 35 Advanced Database Programming
 - [ ] Chapter 36 Internationalization
