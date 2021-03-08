@@ -64,7 +64,7 @@ public class Heap<E extends Comparable<E>> {
             return null;
         }
 
-        System.out.println(list);
+        // System.out.println(list);
 
         // Remember the root object, set the root to the last node, 
         // and remove the last node
