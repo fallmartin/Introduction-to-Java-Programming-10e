@@ -65,6 +65,8 @@ public class QuickSort {
      *
      * @param <E>
      * @param list
+     * @param first
+     * @param last
      */
     public static <E extends Comparable<E>> void quickSort(E[] list, int first, int last) {
         if (first < last) {
@@ -73,11 +75,11 @@ public class QuickSort {
             int high = last;
 
             while (low < high) {
-                if (low <= high && list[low].compareTo(pivot) <= 0) {
+                while (low <= high && list[low].compareTo(pivot) <= 0) {
                     low++;
                 }
 
-                if (low <= high && list[high].compareTo(pivot) > 0) {
+                while (low <= high && list[high].compareTo(pivot) > 0) {
                     high--;
                 }
 
