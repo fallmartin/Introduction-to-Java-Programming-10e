@@ -122,7 +122,7 @@ public class TwoWayLinkedList<E> extends AbstractSequentialList<E> {
     // Link element e to the head of the list
     private void linkFirst(E e) {
         final Node<E> f = first;
-        Node<E> newNode = new Node(null, e, f);
+        Node<E> newNode = new Node<>(null, e, f);
         first = newNode;
 
         if (f == null) {
@@ -157,7 +157,7 @@ public class TwoWayLinkedList<E> extends AbstractSequentialList<E> {
         }
 
         final Node<E> previous = next.previous;
-        final Node<E> newNode = new Node(previous, e, next);
+        final Node<E> newNode = new Node<>(previous, e, next);
 
         next.previous = newNode;
         if (previous == null) {
